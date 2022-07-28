@@ -3,15 +3,15 @@ package com.yoandypv.patterns.strategy.service;
 import org.springframework.stereotype.Component;
 
 @Component
-public class RobotKangoro implements IRobotStrategy {
+public class RobotKangoroo implements IRobotStrategy {
 
     @Override
     public RobotType getType() {
-        return RobotType.KANGORO;
+        return RobotType.KANGOROO;
     }
 
     @Override
-    public String getFormaMoverse() {
+    public String getWayToMove() {
         return "Salta";
     }
 }

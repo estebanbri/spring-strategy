@@ -11,7 +11,7 @@ public class RobotRoomba implements IRobotStrategy {
     }
 
     @Override
-    public String getFormaMoverse() {
+    public String getWayToMove() {
         return "Se desliza";
     }
 }

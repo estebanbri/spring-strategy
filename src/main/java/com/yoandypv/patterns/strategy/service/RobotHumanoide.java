@@ -11,7 +11,7 @@ public class RobotHumanoide implements IRobotStrategy {
     }
 
     @Override
-    public String getFormaMoverse() {
+    public String getWayToMove() {
         return "Por pasos";
     }
 }
