@@ -10,7 +10,7 @@ import java.util.Map;
 @Service
 public class RobotContext implements InitializingBean {
 
-    private List<IRobotStrategy> robotStrategies;
+    private List<IRobotStrategy> robotStrategies; // Spring automaticamente inyecta todas las clases que implementen dicha interface automaticamente
 
     private Map<RobotType,IRobotStrategy> map;
 
@@ -19,7 +19,7 @@ public class RobotContext implements InitializingBean {
     }
 
     @Override
-    public void afterPropertiesSet() {
+    public void afterPropertiesSet() { // Remplaza a @PostContruct de Java EE porque a partir de java 11 se removio dichas anotaciones
         this.map = new HashMap<>();
         robotStrategies.forEach(robotStrategies -> map.put(robotStrategies.getType(), robotStrategies));
     }
